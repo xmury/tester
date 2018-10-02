@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tester</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        
+        #main {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+
+            /* width: 100%;
+            height: 100%; */
+        }
+    </style>
+
+</head>
+<body>
+    <div id="main">
+        <div class="flex big" id="list"> List </div>
+        <div class="flex big" id="test"> Test
+            <div class="flex" id="qvestion"></div>
+            <div class="flex" id="options"> 
+                <p>A. <input name="A" type="radio" value="A" > </p>
+                <p>B. <input name="B" type="radio" value="B" > </p>
+                <p>C. <input name="C" type="radio" value="C" > </p>
+                <p>D. <input name="D" type="radio" value="D" > </p>
+            </div>
+        </div>
+        <div class="flex big" id="input">
+            <p><input type="submit" value="Выбрать"></p>
+        </div>
+    </div>
+</body>
+</html>
