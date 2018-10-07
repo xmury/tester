@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Generator</title>
+    <style>
+        div {
+            /*display: flex;*/
+        }   
+        .form {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 10px;
+
+            border: 2px solid black;
+        }
+
+        .in-form {
+            width: 25%;
+        }
+
+        input {
+            width: 25%;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id='area'> 
+        <div class="form" id=1>
+            <p class="N" >1</p>
+
+            <p>Вопрос:</p>
+            <input type="text" name="qwestion" value="">
+
+            <p>Правильный ответ:</p>
+            <input type="text" name="ansfer" value="">
+            
+            <button class=" btn del" onclick="deliter()">Удалить</button>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button class=" btn" onclick="companator()">Отправить</button>
+        <button class=" btn add" onclick="addQwest()">Добавить</button>
+    </div>
+</body>
+</html>
