@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Generator</title>
-    <style>
-        div {
-            /*display: flex;*/
-        }   
+
+    <script src="./testEditor.js"></script>
+    <style>  
         .form {
             display: flex;
             justify-content: space-around;
@@ -39,7 +38,7 @@
 <body>
     <div id='area'> 
         <div class="form" id=1>
-            <p class="N" >1</p>
+            <p class="N" id="N1">1</p>
 
             <p>Вопрос:</p>
             <input type="text" name="qwestion" value="">
@@ -47,7 +46,7 @@
             <p>Правильный ответ:</p>
             <input type="text" name="ansfer" value="">
             
-            <button class=" btn del" onclick="deliter()">Удалить</button>
+            <button class=" btn del" onclick="deliter(1)">Удалить</button>
         </div>
     </div>
 
