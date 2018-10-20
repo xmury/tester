@@ -47,10 +47,11 @@ function companator(){
         str += `"${qwest}":"${ansfr}", ` // Записать их в строку структуры
     }
     str += "}";
-
+    console.log(str);
     var file_name = document.getElementById('file_name').value + ".js";
     var type = 'data:application/octet-stream;base64, ';
-    var base = btoa(str);
+    // var base = btoa(str);
+    var base = window.btoa(unescape(encodeURIComponent(str)));
     var res = type + base;
     
     var obj = document.getElementById('download');
