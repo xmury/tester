@@ -40,17 +40,16 @@ function deliter(objId){
 function companator(){
     /* задача: Из всех полей собрать информацию, добавить её в строку оформленную как js структура 
     и дать это скачать пользователю, или сразу вшить это в файл*/
-    var str = "test = {";
-    for (var i = 1; i <= id; i++){ // Пройти по всем формам. 
-        qwest = document.getElementById(`Q${i}`).value; // Получить их объект и данные из форм
+    
+    var str = "";
+    for (var i = 1; i <= id; i++){                          // Пройти по всем формам. 
+        qwest = document.getElementById(`Q${i}`).value;     // Получить их объект и данные из форм
         ansfr = document.getElementById(`A${i}`).value;
-        str += `"${qwest}":"${ansfr}", ` // Записать их в строку структуры
+        str += `"${qwest}":"${ansfr}", `                    // Записать их в строку структуры
     }
-    str += "}";
-    console.log(str);
+
     var file_name = document.getElementById('file_name').value + ".js";
     var type = 'data:application/octet-stream;base64, ';
-    // var base = btoa(str);
     var base = window.btoa(unescape(encodeURIComponent(str)));
     var res = type + base;
     
