@@ -12,32 +12,47 @@
         div {
             border: 1px solid black;
         }
-        
+
+        #qwestion {
+            text-align: center;
+            padding: 5px;
+            border-bottom: 0px;
+        }
+
         #main {
             display: flex;
             justify-content: space-between;
             flex-wrap: nowrap;
+        }
+        #test {
+            width: 50%;
+            padding: 10px;
+        }
 
-            /* width: 100%;
-            height: 100%; */    
+        .opt {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+            padding: 5px;
+            border: 0px solid white;
         }
     </style>
 
 </head>
 <body>
+    
     <div id="main">
         <div class="flex big" id="list">  
             <p><input type="file" value="Выбрать тест" id="file" onchange="start()"></p>
             <button class=" btn del" onclick="parser()">Запуск</button></p>
-            List
         </div>
-        <div class="flex big" id="test"> Test
-            <div class="flex" id="qvestion"></div>
+        <div class="flex big" id="test"> 
+            <div class="flex" id="qwestion">Qwestion</div>
             <div class="flex" id="options"> 
-                <p>A. <input name="A" type="radio" value="A" > </p>
-                <p>B. <input name="B" type="radio" value="B" > </p>
-                <p>C. <input name="C" type="radio" value="C" > </p>
-                <p>D. <input name="D" type="radio" value="D" > </p>
+                <div class="opt"> <p> <input name="A" type="radio" value="A" id="varA"> A. </p> <p id="testA"> </p> </div>
+                <div class="opt"> <p> <input name="B" type="radio" value="B" id="varB"> B. </p> <p id="testB"> </p> </div>
+                <div class="opt"> <p> <input name="C" type="radio" value="C" id="varC"> C. </p> <p id="testC"> </p> </div>
+                <div class="opt"> <p> <input name="D" type="radio" value="D" id="varD"> D. </p> <p id="testD"> </p> </div>
             </div>
         </div>
         <div class="flex big" id="input">
