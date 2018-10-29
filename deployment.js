@@ -31,8 +31,6 @@ function parser() {
         else            { arr_word[n] = arr[i]; n++; }
     }    
 
-    console.log(arr_key);
-    console.log(arr_word);
     generation_test();
 }
 
@@ -43,21 +41,16 @@ function generation_test(){
         test[i] = {}; test[i].qwest = arr_key[i]; test[i].var = [];
         // Выбираем ячейку для правильного ответа 
         var arr = [];
-        rand = getRandom(); test[i].var[rand] = arr_word[i]; arr.push(rand);
+        rand = getRandom(); test[i].var[rand] = arr_word[i]; arr.push(i);
         // Заполняем прочие ячейки
-        var w = 1; while (w < 4) {
-            if (test[i].var[i]) { w++; }
+        var w = 0; while (w <= 3) {
+            if (test[i].var[w]) { w++; }
             else { 
                 rand = getRandom(); if (arr.indexOf(rand) == -1) {
-                    arr.push(rand); test[i].var[rand] = rand; w++;
-                    console.log(`rand = ${rand} | ${arr_word[rand]} | arr = ${arr}`)
-                    console.log(`w = ${w}`)
+                    arr.push(rand); test[i].var[w] = arr_word[rand]; w++;
                 }
             }
-        }
-        console.log("----");
-        console.log(test[i]);
-        console.log("----");
+    }
         test.innerHTML += `
         <button class=" btn" id="qwest${i}" onclick="qwest_switcher(${i})">Вопрос ${i+1}</button></p>` 
     }
