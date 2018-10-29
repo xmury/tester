@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="./deployment.js"></script>
+    <script src="./processing.js"></script>
 
     <title>Tester</title>
 
@@ -36,6 +37,28 @@
             padding: 5px;
             border: 0px solid white;
         }
+
+        #input {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 10%;
+        }
+        
+        #undcounter {
+            height: 20%;
+            width: 100%;
+            border-bottom: 2px solid black;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;            
+            align-items: center;
+        }
+
+        .answ {
+            width: 100%;
+            height: 20%;
+        }
     </style>
 
 </head>
@@ -49,14 +72,16 @@
         <div class="flex big" id="test"> 
             <div class="flex" id="qwestion">Qwestion</div>
             <div class="flex" id="options"> 
-                <div class="opt"> <p> <input name="A" type="radio" value="A" id="varA"> A. </p> <p id="testA"> </p> </div>
-                <div class="opt"> <p> <input name="B" type="radio" value="B" id="varB"> B. </p> <p id="testB"> </p> </div>
-                <div class="opt"> <p> <input name="C" type="radio" value="C" id="varC"> C. </p> <p id="testC"> </p> </div>
-                <div class="opt"> <p> <input name="D" type="radio" value="D" id="varD"> D. </p> <p id="testD"> </p> </div>
+                <div class="opt"> <p> <input name="A" type="radio" value="A" id="var0"> A. </p> <p id="testA"> </p> </div>
+                <div class="opt"> <p> <input name="A" type="radio" value="B" id="var1"> B. </p> <p id="testB"> </p> </div>
+                <div class="opt"> <p> <input name="A" type="radio" value="C" id="var2"> C. </p> <p id="testC"> </p> </div>
+                <div class="opt"> <p> <input name="A" type="radio" value="D" id="var3"> D. </p> <p id="testD"> </p> </div>
             </div>
         </div>
         <div class="flex big" id="input">
-            <p><input type="submit" value="Ответить"></p>
+            <div id='undcounter'> <p> True: </p> <p id="counter">0</p></div>
+            <button class=" btn answ" onclick="processing()">Ответить</button></p>
+            <button class=" btn answ" onclick="complite_test()">Сдать</button></p>
         </div>
     </div>
 </body>

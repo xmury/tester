@@ -1,6 +1,7 @@
 // deployment = развертывание
 var text; var arr_key = []; var arr_word = [];
 var status = []; var test = [];
+global_index = 1;
 
 function start() {
     var reader = new FileReader();
@@ -62,7 +63,8 @@ function getRandom() {
 }
 
 function qwest_switcher(index){
-    document.getElementById('qwestion').innerHTML = `<p>Вопрос ${index}: ${test[index].qwest}</p>`;
+    global_index = index;
+    document.getElementById('qwestion').innerHTML = `<p>Вопрос ${index+1}: ${test[index].qwest}</p>`;
     document.getElementById('testA').innerHTML = test[index].var[0];
     document.getElementById('testB').innerHTML = test[index].var[1];
     document.getElementById('testC').innerHTML = test[index].var[2];
